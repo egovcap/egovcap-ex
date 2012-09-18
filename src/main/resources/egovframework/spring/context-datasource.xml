@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:egovcap="http://schema.egovframe.org/egovcap"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://schema.egovframe.org/egovcap http://schema.egovframe.org/egovcap/egovcap-1.0.xsd">
+	
+	<egovcap:data-source service-name="db1">
+		<egovcap:script location="classpath:/sampledb_ddl.script" version="2" />
+		<egovcap:script location="classpath:/sampledb_data.script" sql="select * from IDS limit 1" />
+	</egovcap:data-source>
+	
+</beans>
